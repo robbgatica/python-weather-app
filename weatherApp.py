@@ -33,7 +33,7 @@ def image_path(img_dir_name: str, img_file_name: str) -> "File Path":
 
 
 # GUI
-# Tkinter window Size Parameters
+# Tkinter window size parameters
 HEIGHT = 400
 WIDTH = 400
 
