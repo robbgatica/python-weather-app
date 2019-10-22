@@ -3,7 +3,7 @@ from twilio.rest import Client
 
 
 def get_weather():
-    weather_key = "84e47e1e1cca691ef6e53d7126dc1764"
+    weather_key = "Enter Your API Key Here"
     url = "http://api.openweathermap.org/data/2.5/weather?id="
     params = {"APPID": weather_key, "q": "Chicago", "units": "imperial"}
     response = requests.get(url, params=params)
@@ -26,13 +26,13 @@ def format_response(weather):
 
 
 def text_message(temp, desc):
-    account_sid = "ACc11052ae22166bc9ba018eac3eb968de"
-    auth_token = "549dbd93cfc861ae3ec1273b22c205df"
+    account_sid = "Enter Your Twilio SID Here"
+    auth_token = "Enter Your Token Here"
     client = Client(account_sid, auth_token)
     message = client.messages.create(
         body="It is currently {} degrees with {}".format(temp, desc),
-        from_="+18727135673",
-        to="+17734561045",
+        from_="+Enter Your Twilio Number Here",
+        to="+Enter the Destination Phone Number Here",
     )
     print(message.sid)
 
