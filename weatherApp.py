@@ -56,10 +56,10 @@ entry.place(relwidth=0.65, relheight=1)
 button = tk.Button(frame, text="Get Weather", command=lambda: get_weather(entry.get()))
 button.place(relx=0.7, relwidth=0.3, relheight=1)
 
-lower_frame = tk.Frame(root)  # bg="#000", bd=1
+lower_frame = tk.Frame(root)
 lower_frame.place(relx=0.5, rely=0.35, relwidth=0.75, relheight=0.35, anchor="n")
 
 label = tk.Label(lower_frame)
-label.place(relwidth=1, relheight=1)  # Fills the frame 100%
+label.place(relwidth=1, relheight=1)
 
 root.mainloop()
